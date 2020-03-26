@@ -1,4 +1,4 @@
-module kissenv
+module github.com/mcueto/golang-kiss-env
 
 go 1.14
 
