@@ -16,8 +16,8 @@ func GetEnv(key string) string  {
 	value, exists := os.LookupEnv(key)
 
 	if exists {
-		log.Print(
-      fmt.Debug(
+		log.Debugf(
+      fmt.Sprintf(
         "%s ENV VAR exists",
         key,
       ),
@@ -33,7 +33,7 @@ func LoadEnvFile(filename string) {
   err := godotenv.Load(filename)
 
   if err != nil {
-    log.Debug(
+    log.Debugf(
       fmt.Sprintf(
 				"Cannot load %s file, default ENV VAR values will be used",
         envFile,
